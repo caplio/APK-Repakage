@@ -1,4 +1,38 @@
-まだ未完成です。
-apktoolをパスの通ったところにおいて下さい
-apktool if framework-res.apk
-を事前にしておく必要があります。
+★まだ未完成です★
+
+これは、MIUIなどのROMを日本語化した際に、一部のパッケージが
+韓国語表示になるのを防ぐ為に、作成したバッチファイルとなります。
+
+　※Localeの日本語化は、以下のcommandで可能です。
+
+　# setprop persist.sys.language ja
+　# setprop persist.sys.country JP
+
+■使用方法
+
+・apktoolと7za.exeをパスの通った所において下さい。
+
+・apktool if framework-res.apk　を事前にしておく必要があります。
+　(systemUIも?
+
+・0copy-vaule-en.cmd にapkファイルをDropすると、outputフォルダに、
+　values-enがvalues-jaとしてコピーされたapkファイルが作成されます。
+　(オリジナルのapkも一緒に保存されます)
+
+今の所、Frameworkは英語表記になるので、下記apkを変換しておけば、
+事足りそうです。
+
+　AntiSpam.apk
+　Monitor.apk
+　SideKick.apk
+　Updater.apk
+
+■ Sign.batについて
+
+　上のToolなどで、apkを置き変えたROMファイルを、
+　署名するためのバッチファイルです。
+
+　ファイルをDropすると、署名したzipファイルを作成します。
+　
+　framework-res.apkの再署名も多分大丈夫・・。
+　
