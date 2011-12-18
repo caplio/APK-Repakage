@@ -1,0 +1,4 @@
+まだ未完成です。
+apktoolをパスの通ったところにおいて下さい
+apktool if framework-res.apk
+を事前にしておく必要があります。
